@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block extra_header %}
+<link rel="stylesheet" type="text/css" href="/media/css/jquery.fixedheadertable.css" />
+<script type="text/javascript" src="/media/js/jquery.fixedheadertable.js"></script>
+<script type="text/javascript" src="/media/js/ec.js"></script>
+<script type="text/javascript" src="/media/js/ec_properties.js"></script>
+<title>EC Extend Management - Properties</title>
+{% endblock %}
+{% block content %}
+<div class="row">
+<div class="col-md-4 btn-group">
+   {% include "tags/host_listbox.html" %}
+</div>
+<div class="col-md-4 btn-group">
+   {% include "tags/project_listbox.html" %}
+</div>
+<div class="col-md-4">
+  <input type="text" id="search_text" style="width:80%;font-style:italic; color:gray; height:33px" value="search property">
+  <input type="submit" id="search" class="btn btn-default" style="float:right" value="search">
+</div>
+</div>
+{% include "tags/waiting_box.html" %}
+<div id='search_result' class="result_block serif"></div>
+{% endblock %}

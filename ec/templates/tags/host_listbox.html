@@ -1,0 +1,12 @@
+<button id="select_host" data-ishost="false" style="font-style:italic" type="button" class="btn btn-default">Please choose ec host</button>
+<button type="button" class="btn btn-default dropdown-toggle"
+   data-toggle="dropdown">
+   <span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+  <li style="font-style:italic" data-ishost="false"><a class="host_option" href="#">Please choose ec host</a></li>
+  <li class="divider"></li>
+   {% for host in HOSTS %}
+     <li><a class="host_option" data-ishost="true" href="#">{{host}}</a></li>
+   {% endfor %}
+</ul>

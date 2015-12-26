@@ -1,0 +1,12 @@
+<button id="select_project" data-isproject="false" style="font-style:italic" type="button" class="btn btn-default">Please choose data project</button>
+<button type="button" class="btn btn-default dropdown-toggle"
+   data-toggle="dropdown">
+   <span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+  <li style="font-style:italic"><a class="project_option" data-isproject="false" href="#">Please choose data project</a></li>
+  <li class="divider"></li>
+   {% for project in PROJECTS %}
+     <li><a class="project_option" data-isproject="true" href="#">{{project}}</a></li>
+   {% endfor %}
+</ul>

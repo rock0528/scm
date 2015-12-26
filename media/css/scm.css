@@ -1,0 +1,28 @@
+.serif {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+.waiting_box {
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  opacity:0.8;
+  background-color: gray;
+  z-index: 100;
+}
+
+.waiting_img {
+  position:absolute;
+  left:40%;
+  top:30%;
+}
+
+.result_block {
+  position: absolute;
+  width:97%;
+  height:83%;
+  padding-top:10px;
+}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block extra_header %}
+<link rel="stylesheet" type="text/css" href="/media/css/jquery.fixedheadertable.css" />
+<script type="text/javascript" src="/media/js/jquery.fixedheadertable.js"></script>
+<script type="text/javascript" src="/media/js/ec.js"></script>
+<script type="text/javascript" src="/media/js/ec_schedules.js"></script>
+<title>EC Extend Management - Schedules</title>
+{% endblock %}
+{% block content %}
+<div class="row">
+<div class="col-md-4 btn-group">
+   {% include "tags/host_listbox.html" %}
+</div>
+<div class="col-md-4 btn-group">
+   {% include "tags/project_listbox.html" %}
+</div>
+</div>
+<div class="row" style="margin-top:10px">
+  <div class="col-md-2">
+    <button id="get" type="button" class="btn btn-primary">Get Last Backup</button>
+  </div>
+  <div class="col-md-3">
+    <button id="backup" type="button" class="btn btn-primary">Backup And Disable All Schedules</button>
+  </div>
+  <div class="col-md-2">
+    <button id="restore" type="button" class="btn btn-primary">Restore</button>
+  </div>
+</div>
+<div class="row" style="margin-top:10px; color:white">
+  <div class="col-md-2">Last Backup Time : </div>
+  <div id="backup_time" class="col-md-2"></div>
+  <div class="col-md-2">Restore Info : </div>
+  <div id="store_info" class="col-md-6"></div>
+</div>
+{% include "tags/waiting_box.html" %}
+<div id='schedule_result' class="result_block serif"></div>
+{% endblock %}
